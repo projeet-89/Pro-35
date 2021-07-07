@@ -6,28 +6,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
     <script src="p5.play.js"></script>
     
-<!-- The core Firebase JS SDK is always required and must be listed first -->
 
+  
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-    
-  // Your web app's Firebase configuration
 
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyANLbdXyZx5gypPDIADael-a9aQCBTLgcU",
+    authDomain: "projectc-35-44dec.firebaseapp.com",
+    databaseURL: "https://projectc-35-44dec-default-rtdb.firebaseio.com",
+    projectId: "projectc-35-44dec",
+    storageBucket: "projectc-35-44dec.appspot.com",
+    messagingSenderId: "464181869287",
+    appId: "1:464181869287:web:1c5db4c914b2384dc14042"
+  };
   // Initialize Firebase
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyAr3SJkyoivdcfIazR8E8qhMHpZ5T7SPho",
-      authDomain: "hot-air-balloon-46595.firebaseapp.com",
-      databaseURL: "https://hot-air-balloon-46595-default-rtdb.firebaseio.com",
-      projectId: "hot-air-balloon-46595",
-      storageBucket: "hot-air-balloon-46595.appspot.com",
-      messagingSenderId: "460666326020",
-      appId: "1:460666326020:web:9b6c136157418ea32ff951"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-  </script>
+  firebase.initializeApp(firebaseConfig);
+</script>
+
 
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <meta charset="utf-8">

@@ -18,11 +18,12 @@ function setup() {
   balloon.addAnimation("hotAirBalloon",balloonImage1);
   balloon.scale=0.5;
 
-  textSize(20); 
+var balloonHeight = database.ref('balloon/height');
+balloonHeight.on("value",readHeight);
 }
 
 // function to display UI
-function updateHeight(){
+function updateHeight(x,y){
   database.ref('balloon/height').set({
     'x' : height.x + x ,
     'y' : height.y +y
@@ -48,13 +49,13 @@ function draw() {
 
   if(keyDown(LEFT_ARROW)){
     balloon.addAnimation("hotAirBalloon",balloonImage2);
-    updateHeight(1,-30)
+    updateHeight(-30,1)
     balloon.scale = balloon.scale -0.01;
     //write code to move air balloon in left direction
   }
   else if(keyDown(RIGHT_ARROW)){
     balloon.addAnimation("hotAirBalloon",balloonImage2);
-    updateHeight(1,20)
+    updateHeight(20,1)
     balloon.scale = balloon.scale -0.01;
     //write code to move air balloon in right direction
   }
